@@ -31,8 +31,11 @@ header {
     background-color: chartreuse;
 }
 
-#etape1{
-padding-bottom: 50px;
+#etape1, #etape2{
+    padding-bottom: 50px;
+}
+#etape2{
+    display: none;
 }
 
 #text_com{
