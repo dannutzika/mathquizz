@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    background-color: beige;
+}
+
+.wrapper {
+    width: 800px;
+    display: grid;
+    margin: 0 auto; 
+}
+
+header {
+    display: grid;
+    height: 200px;
+    grid-row-gap: 3px;
+    background-color: #FFF200;
+}    
+   
+#title {
+    font-size: 80px;
+    font-family: 'Black And White Picture', sans-serif;
+    font-family: 'Chewy', cursive;
+    font-weight: bolder;
+    text-align: center;
+    -webkit-text-fill-color: chartreuse;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: forestgreen;
+    padding: 40px;
+}
+#container {
+    background-color: chartreuse;
+}
+
+#etape1{
+padding-bottom: 50px;
+}
+
+#text_com{
+    padding: 20px;
+    padding-left: 50px;
+    padding-top: 80px;
+    font-size: 20px;
+    font-family: 'Chewy', cursive;
+    color: red;
+}
+
+.buttons_op {
+    margin: 0 auto;
+    width: 340px;
+    /*padding: 150px;*/
+}
+
+.button{
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: inline-block;
+    color: white;
+    background-color: gray;
+    text-align: center;
+    font-family: cursive;
+    box-shadow: 4px 4px 7px #515151;
+    cursor: pointer;
+}
+.button:focus {
+    outline-color: transparent;
+}
+
+.buttons_op .button {
+    width: 150px;
+    height: 150px;
+    padding-top: 15px;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.buttons_op .button.pressed, .button:active {
+    box-shadow: inset 2px 2px 3px 0px black;
+    transform: translateY(4px);
+}
+    
+.sign_op {
+    font-size: 50px;
+}
+    
+
+#b1 { 
+    background-color: mediumblue;  
+}
+
+#b2 {
+    background-color: red;    
+}
+
+#b3 {
+    background-color: orange;   
+}
+
+#b4 {
+    background-color: purple;  
+}
+
+#amount{
+    color: blue;
+    font-family: 'Chewy', cursive;
+    font-size: 20px;
+    text-align: center;
+    width: 30px;
+    margin: 0 auto;
+}
+
+#text_sel {
+    padding: 20px;
+    padding-bottom: 5px;
+    color: blue;
+    margin-left: 33px;
+    font-family: 'Chewy', cursive;
+    font-size: 24px;
+}
+
+#select_no {
+    width: 304px;
+    height: 25px;
+    margin: 0 auto;
+}
+
+#custom-handle {
+    text-align: center;
+    font-family: 'Chewy', cursive;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 34px;
+    padding-top: 6px;
+    color: blue;
+}
+
+.begin {
+    margin: 50px;
+    padding-left: 235px;
+}
+
+.begin .button  {
+  background-color: blue;
+  border: none;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  margin: 5px;
+}
+
+.begin .button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.begin .button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.begin .button:hover span {
+    padding-right: 25px;
+}
+
+.begin .button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
