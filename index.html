@@ -9,14 +9,28 @@
       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
       <script>
+        var maxNumber = 0;
          $(document).ready(function(){
              $('.buttons_op .button').on('click', function() {
                  $(this).toggleClass('pressed');
              });
              $('.begin .button').on('click', function() {
-                 $('#etape1').hide();
-                 $('#etape2').show();
+                 if ($(".button.pressed").length > 0) {
+                    $('#etape1').hide();
+                    $('#etape2').show();
+
+                    maxNumber = $( "#select_no" ).slider("value");
+                    
+                    var nr1 = Math.round(Math.random() * maxNumber);
+                    var nr2 = Math.round(Math.random() * maxNumber);
+                    var rc = nr1 + nr2;
+                    $(".question" ).html(nr1 + ' + ' + nr2 + ' = ?');
+                    
+                 } else {
+                    alert('SVP sélecte au mois une opération!');
+                 }
              });
+
          });
       </script>
       <script>
@@ -33,7 +47,9 @@
             $( "#custom-handle" ).text( ui.value );
           }
          });
-         $( "#amount" ).val( $( "#select_no" ).slider( "value" ) );
+         $( "#amount" ).val(
+              $( "#select_no" ).slider( "value" )
+            );
          } );
       </script>
    </head>
