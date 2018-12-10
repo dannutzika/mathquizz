@@ -175,3 +175,41 @@ header {
   right: 0;
 }
 
+.problem_container{
+    padding-top: 100px;
+}
+
+.question{
+    border-radius: 15px;
+    margin-left: 216px;
+    padding: 90px;
+    width: 185px;
+    height: 50px;
+    font-family: cursive;
+    font-size: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 19px #515151;
+}
+.problem_container.addition .question{
+    border: 5px solid mediumblue;
+    color: mediumblue;
+}
+.problem_container.subtraction .question {
+    border: 5px solid red;
+    color: red;
+}
+
+
+.answers{
+    margin-top: 50px;
+    text-align: center;
+}
+.answers .button{
+   font-size: -webkit-xxx-large;
+   width: 130px;
+   height: 75px;
+   margin: 0 15px;
+}
+.problem_container.addition .button {
+    background-color: mediumblue;
+}
