@@ -1,144 +1,145 @@
 body {
-    margin: 0;
-    background-color: beige;
+	margin: 0;
+	background-color: beige;
 }
 
 .wrapper {
-    width: 800px;
-    display: grid;
-    margin: 0 auto; 
+	width: 800px;
+	display: grid;
+	margin: 0 auto; 
 }
 
 header {
-    display: grid;
-    height: 200px;
-    grid-row-gap: 3px;
-    background-color: #FFF200;
-}    
-   
+	display: grid;
+	height: 200px;
+	grid-row-gap: 3px;
+	background-color: #FFF200;
+}
+
 #title {
-    font-size: 80px;
-    font-family: 'Black And White Picture', sans-serif;
-    font-family: 'Chewy', cursive;
-    font-weight: bolder;
-    text-align: center;
-    -webkit-text-fill-color: chartreuse;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: forestgreen;
-    padding: 40px;
+	font-size: 80px;
+	font-family: 'Black And White Picture', sans-serif;
+	font-family: 'Chewy', cursive;
+	font-weight: bolder;
+	text-align: center;
+	-webkit-text-fill-color: chartreuse;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: forestgreen;
+	padding: 40px;
 }
 #container {
-    background-color: chartreuse;
+	background-color: chartreuse;
+	height: 920px;
 }
 
 #etape1, #etape2{
-    padding-bottom: 50px;
+	padding-bottom: 50px;
 }
 #etape2{
-    display: none;
+	display: none;
 }
 
 #text_com{
-    padding: 20px;
-    padding-left: 50px;
-    padding-top: 80px;
-    font-size: 20px;
-    font-family: 'Chewy', cursive;
-    color: red;
+	padding: 20px;
+	padding-left: 50px;
+	padding-top: 80px;
+	font-size: 20px;
+	font-family: 'Chewy', cursive;
+	color: red;
 }
 
 .buttons_op {
-    margin: 0 auto;
-    width: 340px;
-    /*padding: 150px;*/
+	margin: 0 auto;
+	width: 340px;
 }
 
 .button{
-    box-sizing: border-box;
-    border-radius: 20px;
-    display: inline-block;
-    color: white;
-    background-color: gray;
-    text-align: center;
-    font-family: cursive;
-    box-shadow: 4px 4px 7px #515151;
-    cursor: pointer;
+	box-sizing: border-box;
+	border-radius: 20px;
+	display: inline-block;
+	color: white;
+	background-color: gray;
+	text-align: center;
+	font-family: cursive;
+	box-shadow: 4px 4px 7px #515151;
+	cursor: pointer;
+	user-select: none;
 }
 .button:focus {
-    outline-color: transparent;
+	outline-color: transparent;
 }
 
 .buttons_op .button {
-    width: 150px;
-    height: 150px;
-    padding-top: 15px;
-    margin: 5px;
-    font-size: 20px;
+	width: 150px;
+	height: 150px;
+	padding-top: 15px;
+	margin: 5px;
+	font-size: 20px;
 }
 
 .buttons_op .button.pressed, .button:active {
-    box-shadow: inset 2px 2px 3px 0px black;
-    transform: translateY(4px);
+	box-shadow: inset 2px 2px 3px 0px black;
+	transform: translateY(4px);
 }
-    
+	
 .sign_op {
-    font-size: 50px;
+	font-size: 50px;
 }
-    
+	
 
 #b1 { 
-    background-color: mediumblue;  
+	background-color: mediumblue;  
 }
 
 #b2 {
-    background-color: red;    
+	background-color: red;    
 }
 
 #b3 {
-    background-color: orange;   
+	background-color: orange;   
 }
 
 #b4 {
-    background-color: purple;  
+	background-color: purple;  
 }
 
 #amount{
-    color: blue;
-    font-family: 'Chewy', cursive;
-    font-size: 20px;
-    text-align: center;
-    width: 30px;
-    margin: 0 auto;
+	color: blue;
+	font-family: 'Chewy', cursive;
+	font-size: 20px;
+	text-align: center;
+	width: 30px;
+	margin: 0 auto;
 }
 
 #text_sel {
-    padding: 20px;
-    padding-bottom: 5px;
-    color: blue;
-    margin-left: 33px;
-    font-family: 'Chewy', cursive;
-    font-size: 24px;
+	padding: 20px;
+	padding-bottom: 5px;
+	color: blue;
+	margin-left: 33px;
+	font-family: 'Chewy', cursive;
+	font-size: 24px;
 }
 
 #select_no {
-    width: 304px;
-    height: 25px;
-    margin: 0 auto;
+	width: 304px;
+	height: 25px;
+	margin: 0 auto;
 }
 
 #custom-handle {
-    text-align: center;
-    font-family: 'Chewy', cursive;
-    cursor: pointer;
-    box-sizing: border-box;
-    height: 34px;
-    padding-top: 6px;
-    color: blue;
+	text-align: center;
+	font-family: 'Chewy', cursive;
+	cursor: pointer;
+	box-sizing: border-box;
+	height: 34px;
+	padding-top: 6px;
+	color: blue;
 }
 
 .begin {
-    margin: 50px;
-    padding-left: 235px;
+	margin: 50px;
+	padding-left: 235px;
 }
 
 .begin .button  {
@@ -167,7 +168,7 @@ header {
   transition: 0.5s;
 }
 .begin .button:hover span {
-    padding-right: 25px;
+	padding-right: 25px;
 }
 
 .begin .button:hover span:after {
@@ -176,40 +177,49 @@ header {
 }
 
 .problem_container{
-    padding-top: 100px;
+	padding-top: 20px;
 }
 
 .question{
-    border-radius: 15px;
-    margin-left: 216px;
-    padding: 90px 0;
-    width: 400px;
-    height: 50px;
-    font-family: cursive;
-    font-size: 50px;
-    text-align: center;
-    box-shadow: 2px 2px 19px #515151;
+	border-radius: 15px;
+	margin:0 auto;
+	padding: 90px 0;
+	width: 400px;
+	height: 50px;
+	font-family: cursive;
+	font-size: 50px;
+	text-align: center;
+	box-shadow: 2px 2px 19px #515151;
 }
 .problem_container.addition .question{
-    border: 5px solid mediumblue;
-    color: mediumblue;
+	border: 5px solid mediumblue;
+	color: mediumblue;
 }
 .problem_container.subtraction .question {
-    border: 5px solid red;
-    color: red;
+	border: 5px solid red;
+	color: red;
 }
 
 
 .answers{
-    margin-top: 50px;
-    text-align: center;
+	margin-top: 50px;
+	text-align: center;
 }
 .answers .button{
-   font-size: -webkit-xxx-large;
-   width: 130px;
-   height: 75px;
-   margin: 0 15px;
+	font-size: -webkit-xxx-large;
+	width: 130px;
+	height: 75px;
+	margin: 0 15px;
 }
 .problem_container.addition .button {
-    background-color: mediumblue;
+	background-color: mediumblue;
+}
+
+.funnyImage {
+    text-align: center;
+}
+.funnyImage img {
+    height: 250px;
+    margin: 15px;
+    border-radius: 25px;
 }

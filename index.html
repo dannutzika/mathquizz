@@ -1,113 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <title>MathQuizz</title>
-      <link rel="stylesheet" href="style.css">
-      <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture|Chewy" rel="stylesheet">
-      <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-      <script>
-        var maxNumber = 0;
-         $(document).ready(function(){
-             $('.buttons_op .button').on('click', function() {
-                 $(this).toggleClass('pressed');
-             });
-             $('.begin .button').on('click', function() {
-                 if ($(".button.pressed").length > 0) {
-                    $('#etape1').hide();
-                    $('#etape2').show();
-
-                    maxNumber = $( "#select_no" ).slider("value");
-                    
-                    var nr1 = Math.round(Math.random() * maxNumber);
-                    var nr2 = Math.round(Math.random() * maxNumber);
-                    var rc = nr1 + nr2;
-                    $(".question" ).html(nr1 + ' + ' + nr2 + ' = ?');
-                    
-                 } else {
-                    alert('SVP sélecte au mois une opération!');
-                 }
-             });
-
-         });
-      </script>
-      <script>
-         $( function() {
-         $( "#select_no" ).slider({
-          range: "max",
-          min: 1,
-          max: 10,
-          value: 1,
-          create: function() {
-            $( "#custom-handle" ).text( $( this ).slider( "value" ) );
-          },
-          slide: function( event, ui ) {
-            $( "#custom-handle" ).text( ui.value );
-          }
-         });
-         $( "#amount" ).val(
-              $( "#select_no" ).slider( "value" )
-            );
-         } );
-      </script>
-   </head>
-   <body>
-      <div class="wrapper">
-         <header>
-            <div id="title">MathQuizz</div>
-         </header>
-         <main>
-            <div id="container">
-               <div id="etape1">
-                  <div id="text_com">
-                     Bonjour et bienvenue sur MathQuizz!<br>
-                     Pour commencer le quizz il faut d'abord sélectionner l'(les) operatione(s) mathématique(s) souhaite et les chiffres de 1 à 10 maximum et ensuite clicker sur le button démarrer.<br>
-                     Bonne chance!
-                  </div>
-                  <div class="buttons_op">
-                     <div class="button" class="pressed" id="b1">
-                        <div class="sign_op">+</div>
-                        <div class="sign_text">Addition</div>
-                     </div>
-                     <div class="button" class="pressed" id="b2">
-                        <div class="sign_op">-</div>
-                        <div class="sign_text">Soustraction</div>
-                     </div>
-                     <div class="button" class="pressed" id="b3">
-                        <div class="sign_op">×</div>
-                        <div class="sign_text">Multiplication</div>
-                     </div>
-                     <div class="button" class="pressed" id="b4">
-                        <div class="sign_op">÷</div>
-                        <div class="sign_text">Division</div>
-                     </div>
-                  </div>
-                  <p id="text_sel">
-                     Sélectionner les chiffres:
-                  </p>
-                  <div id="select_no">
-                     <div id="custom-handle" class="ui-slider-handle"></div>
-                  </div>
-                  <div class="begin">
-                     <button class="button"><span>Démarrer</span></button>
-                  </div>
-               </div>
-               <div id="etape2">
-                  <div class="problem_container addition">
-                     <div class="question">
-                        1 + 1 = ?
-                    </div>
-                     <div class="answers">
-                        <div class="button">2</div>
-                        <div class="button">3</div>
-                        <div class="button">4</div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </main>
-      </div>
-   </body>
+	<head>
+			<meta charset="UTF-8">
+			<title>MathQuizz</title>
+			<link rel="stylesheet" href="style.css">
+			<link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture|Chewy" rel="stylesheet">
+			<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+			<script src="index.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div id="title">MathQuizz</div>
+			</header>
+			<main>
+				<div id="container">
+					<div id="etape1">
+						<div id="text_com">
+							Bonjour et bienvenue sur MathQuizz!<br>
+							Pour commencer le quizz il faut d'abord sélectionner l'(les) operatione(s) mathématique(s) souhaite et les chiffres de 1 à 10 maximum et ensuite clicker sur le button démarrer.<br>
+							Bonne chance!
+						</div>
+						<div class="buttons_op">
+							<div class="button" class="pressed" id="b1">
+									<div class="sign_op">+</div>
+									<div class="sign_text">Addition</div>
+							</div>
+							<div class="button" class="pressed" id="b2">
+									<div class="sign_op">-</div>
+									<div class="sign_text">Soustraction</div>
+							</div>
+							<div class="button" class="pressed" id="b3">
+									<div class="sign_op">×</div>
+									<div class="sign_text">Multiplication</div>
+							</div>
+							<div class="button" class="pressed" id="b4">
+									<div class="sign_op">÷</div>
+									<div class="sign_text">Division</div>
+							</div>
+						</div>
+						<p id="text_sel">
+							Sélectionner les chiffres:
+						</p>
+						<div id="select_no">
+							<div id="custom-handle" class="ui-slider-handle"></div>
+						</div>
+						<div class="begin">
+							<button class="button"><span>Démarrer</span></button>
+						</div>
+					</div>
+					<div id="etape2">
+						<div class="problem_container addition">
+							<div class="funnyImage"><img src=""></div>
+							<div class="question"></div>
+							<div class="answers">
+								<div class="button btn-1" onclick="onSelectAnswer(this)"></div>
+								<div class="button btn-2" onclick="onSelectAnswer(this)"></div>
+								<div class="button btn-3" onclick="onSelectAnswer(this)"></div>
+							</div>
+						</div>
+					</div>
+					<div id="etape3">
+						<!-- div class super
+							img
+						div class bravo
+							img
+						div class failed
+							img -->
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
 </html>
