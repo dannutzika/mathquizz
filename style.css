@@ -27,24 +27,32 @@ header {
 	-webkit-text-stroke-color: forestgreen;
 	padding: 40px;
 }
+
 #container {
 	background-color: chartreuse;
 	height: 920px;
+   
 }
 
-#etape1, #etape2{
+#step1, #step2, #step3{
 	padding-bottom: 50px;
 }
-#etape2{
+
+#step2 {
 	display: none;
 }
 
-#text_com{
+#step3 { 
+    display: none;
+}
+
+#text_com {
 	padding: 20px;
 	padding-left: 50px;
 	padding-top: 80px;
 	font-size: 20px;
-	font-family: 'Chewy', cursive;
+	font-family: cursive;
+    font-weight: bolder;
 	color: red;
 }
 
@@ -53,7 +61,7 @@ header {
 	width: 340px;
 }
 
-.button{
+.button {
 	box-sizing: border-box;
 	border-radius: 20px;
 	display: inline-block;
@@ -103,7 +111,7 @@ header {
 	background-color: purple;  
 }
 
-#amount{
+#amount {
 	color: blue;
 	font-family: 'Chewy', cursive;
 	font-size: 20px;
@@ -117,7 +125,8 @@ header {
 	padding-bottom: 5px;
 	color: blue;
 	margin-left: 33px;
-	font-family: 'Chewy', cursive;
+	font-family: cursive;
+	font-weight: bolder;
 	font-size: 24px;
 }
 
@@ -176,11 +185,11 @@ header {
   right: 0;
 }
 
-.problem_container{
+.problem_container {
 	padding-top: 20px;
 }
 
-.question{
+.question {
 	border-radius: 15px;
 	margin:0 auto;
 	padding: 90px 0;
@@ -191,28 +200,39 @@ header {
 	text-align: center;
 	box-shadow: 2px 2px 19px #515151;
 }
-.problem_container.addition .question{
+
+.problem_container.addition .question {
 	border: 5px solid mediumblue;
 	color: mediumblue;
 }
+
 .problem_container.subtraction .question {
 	border: 5px solid red;
 	color: red;
 }
 
-
-.answers{
+.answers {
 	margin-top: 50px;
 	text-align: center;
 }
-.answers .button{
+
+.answers .button {
 	font-size: -webkit-xxx-large;
 	width: 130px;
 	height: 75px;
 	margin: 0 15px;
 }
+
 .problem_container.addition .button {
 	background-color: mediumblue;
+}
+
+.question_no{
+	font-family: cursive;
+	font-size: 20px;
+	font-weight: bolder;
+	color: mediumblue;
+	text-align: center;
 }
 
 .funnyImage {
@@ -223,3 +243,30 @@ header {
     margin: 15px;
     border-radius: 25px;
 }
+
+.results_container {
+    text-align: center;
+    color:red;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+.score{
+	font-family: cursive;
+	font-size: 20px;
+	font-weight: bolder;
+	color: red;
+	text-align: center;
+    padding-top: 30px;
+}
+
+.img_fin {
+	height: 400px;
+    margin: 15px;
+    border-radius: 20px;
+	
+}
+.super, .bravo, .failed {
+	display: none;
+}
+

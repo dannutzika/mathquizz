@@ -17,32 +17,32 @@
 			</header>
 			<main>
 				<div id="container">
-					<div id="etape1">
+					<div id="step1">
 						<div id="text_com">
 							Bonjour et bienvenue sur MathQuizz!<br>
-							Pour commencer le quizz il faut d'abord sélectionner l'(les) operatione(s) mathématique(s) souhaite et les chiffres de 1 à 10 maximum et ensuite clicker sur le button démarrer.<br>
+							Pour commencer le quiz il faut d'abord sélectionner l'(les) operatione(s) mathématique(s) souhaite et les nombres de 2 à 10 maximum. Ensuite clicker sur le button démarrer.<br>							
 							Bonne chance!
 						</div>
 						<div class="buttons_op">
-							<div class="button" class="pressed" id="b1">
+							<div class="button" id="b1">
 									<div class="sign_op">+</div>
 									<div class="sign_text">Addition</div>
 							</div>
-							<div class="button" class="pressed" id="b2">
+							<div class="button" id="b2">
 									<div class="sign_op">-</div>
 									<div class="sign_text">Soustraction</div>
 							</div>
-							<div class="button" class="pressed" id="b3">
+							<div class="button" id="b3">
 									<div class="sign_op">×</div>
 									<div class="sign_text">Multiplication</div>
 							</div>
-							<div class="button" class="pressed" id="b4">
+							<div class="button" id="b4">
 									<div class="sign_op">÷</div>
 									<div class="sign_text">Division</div>
 							</div>
 						</div>
 						<p id="text_sel">
-							Sélectionner les chiffres:
+							Sélectionner les nombres:
 						</p>
 						<div id="select_no">
 							<div id="custom-handle" class="ui-slider-handle"></div>
@@ -51,9 +51,11 @@
 							<button class="button"><span>Démarrer</span></button>
 						</div>
 					</div>
-					<div id="etape2">
+					<div id="step2">
 						<div class="problem_container addition">
+							<div class="question_no"></div>
 							<div class="funnyImage"><img src=""></div>
+							<br>
 							<div class="question"></div>
 							<div class="answers">
 								<div class="button btn-1" onclick="onSelectAnswer(this)"></div>
@@ -62,13 +64,28 @@
 							</div>
 						</div>
 					</div>
-					<div id="etape3">
-						<!-- div class super
-							img
-						div class bravo
-							img
-						div class failed
-							img -->
+					<div id="step3">
+						<div class="results_container">
+							<div class="score">Score total: <span></span></div>
+							<div class="super">
+								<h1>Excellent!</h1>
+								<h3>Tu es un(e) champion(ne) en mathématique!</h3>
+								<br>
+								<img class="img_fin" src="./images/cup.jpg" alt="">
+							</div>
+							<div class="bravo">
+								<h1>Félicitation!</h1>
+								<h3>Tu aimes bien la mathématique!</h3>
+								<br>
+								<img class="img_fin" src="./images/Well-Done.jpg" alt="">
+							</div>
+							<div class="failed">
+								<h1>Pas très bien!</h1>
+								<h3>Il faut encore étudié un petit peu. Courage!</h3>
+								<br>
+								<img class="img_fin" src="./images/invata.jpg" alt="">
+							</div>
+						</div>
 					</div>
 				</div>
 			</main>
